@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DDD.NetCore.Demo
+namespace DDD.NetCore.UI
 {
     public class Startup
     {
@@ -32,7 +32,15 @@ namespace DDD.NetCore.Demo
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // 添加 AutoMapper 
+            services.AddAutoMapperSetup();
+
+            // 注入
+            BootStrapper.RegistetServices(services);
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,9 +3,11 @@
     "DefaultConnection": "server=.;uid=sa;pwd=admin2013;database=EDU"
   },
   "Logging": {
+    "IncludeScopes": false,
     "LogLevel": {
-      "Default": "Warning"
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
     }
-  },
-  "AllowedHosts": "*"
+  }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace DDD.NetCore.Demo.Models
+namespace DDD.NetCore.UI.Models
 {
     public class ErrorViewModel
     {

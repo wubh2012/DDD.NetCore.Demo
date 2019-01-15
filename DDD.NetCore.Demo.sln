@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.NetCore.Demo", "DDD.NetCore.Demo\DDD.NetCore.Demo.csproj", "{B1ADD11C-FEDF-4F47-9330-938D9E08D264}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.UI", "DDD.NetCore.Demo\DDD.NetCore.UI.csproj", "{B1ADD11C-FEDF-4F47-9330-938D9E08D264}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Domain", "DDD.NetCore.Domain\DDD.NetCore.Domain.csproj", "{EF673761-3DB4-4299-AB22-42D6810F998E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Infrastructure.Data", "DDD.NetCore.Infrastructure.Data\DDD.NetCore.Infrastructure.Data.csproj", "{6FD23F0E-2777-4D99-B30A-171CDDB2A8C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Application", "DDD.NetCore.Application\DDD.NetCore.Application.csproj", "{87FAF590-57BC-4387-A21C-693219B957BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.NetCore.Domain.Core", "DDD.NetCore.Domain.Core\DDD.NetCore.Domain.Core.csproj", "{86CA80B7-A96C-4575-8CC2-CDEC725363B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{B1ADD11C-FEDF-4F47-9330-938D9E08D264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1ADD11C-FEDF-4F47-9330-938D9E08D264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1ADD11C-FEDF-4F47-9330-938D9E08D264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF673761-3DB4-4299-AB22-42D6810F998E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF673761-3DB4-4299-AB22-42D6810F998E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF673761-3DB4-4299-AB22-42D6810F998E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF673761-3DB4-4299-AB22-42D6810F998E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD23F0E-2777-4D99-B30A-171CDDB2A8C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD23F0E-2777-4D99-B30A-171CDDB2A8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD23F0E-2777-4D99-B30A-171CDDB2A8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD23F0E-2777-4D99-B30A-171CDDB2A8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FAF590-57BC-4387-A21C-693219B957BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FAF590-57BC-4387-A21C-693219B957BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FAF590-57BC-4387-A21C-693219B957BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FAF590-57BC-4387-A21C-693219B957BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CA80B7-A96C-4575-8CC2-CDEC725363B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CA80B7-A96C-4575-8CC2-CDEC725363B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CA80B7-A96C-4575-8CC2-CDEC725363B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CA80B7-A96C-4575-8CC2-CDEC725363B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
