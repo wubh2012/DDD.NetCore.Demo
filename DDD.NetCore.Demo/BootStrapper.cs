@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using DDD.NetCore.Application.AutoMapper;
-using DDD.NetCore.Application.Interfaces;
 using DDD.NetCore.Application.Services;
-using DDD.NetCore.Domain.Interfaces;
+using DDD.NetCore.Application.Services.Impl;
+using DDD.NetCore.Domain.Repository;
 using DDD.NetCore.Infrastructure.Data.Context;
 using DDD.NetCore.Infrastructure.Data.Repository;
 using Microsoft.Extensions.DependencyInjection;

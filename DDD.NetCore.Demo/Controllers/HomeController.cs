@@ -5,34 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DDD.NetCore.UI.Models;
-using DDD.NetCore.Application.Interfaces;
+
 
 namespace DDD.NetCore.UI.Controllers
 {
     public class HomeController : Controller
     {
-        IStudentAppService studentAppService;
 
-        public HomeController(IStudentAppService _studentAppService)
+
+        public HomeController()
         {
-            studentAppService = _studentAppService;
 
         }
         public IActionResult Index()
         {
-            for (int i = 0; i < 5; i++)
-            {
-                studentAppService.Register(new Application.ViewModel.StudentViewModel()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = $"TestName{i}",
-                    Email = $"aabbccdd0{i}@qq.com",
-                    BirthDate = DateTime.Now.AddMonths(0 - i)
-                });
-            }
-
-            var students = studentAppService.GetAll();
-            return View(students);
+            return View();
         }
 
         public IActionResult About()

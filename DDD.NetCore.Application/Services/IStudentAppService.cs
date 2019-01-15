@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DDD.NetCore.Application.Interfaces
+namespace DDD.NetCore.Application.Services
 {
     public interface IStudentAppService : IDisposable
     {

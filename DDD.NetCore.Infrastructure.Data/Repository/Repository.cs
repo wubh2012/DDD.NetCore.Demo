@@ -1,4 +1,4 @@
-﻿using DDD.NetCore.Domain.Interfaces;
+﻿using DDD.NetCore.Domain.Repository;
 using DDD.NetCore.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;

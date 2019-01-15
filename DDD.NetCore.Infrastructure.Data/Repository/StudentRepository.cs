@@ -1,5 +1,5 @@
 ﻿using DDD.NetCore.Domain;
-using DDD.NetCore.Domain.Interfaces;
+using DDD.NetCore.Domain.Repository;
 using DDD.NetCore.Infrastructure.Data.Context;
 using System;
 using System.Collections.Generic;

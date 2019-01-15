@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DDD.NetCore.Domain.Interfaces
+namespace DDD.NetCore.Domain.Repository
 {
     public interface IRepository<TEntity>: IDisposable where TEntity : class
     {

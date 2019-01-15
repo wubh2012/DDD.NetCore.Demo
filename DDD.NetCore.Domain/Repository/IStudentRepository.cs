@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DDD.NetCore.Domain.Interfaces
+namespace DDD.NetCore.Domain.Repository
 {
     public interface IStudentRepository : IRepository<Student>
     {
