@@ -3,33 +3,83 @@
     ViewData["Title"] = "Index";
 }
 @model IList<StudentViewModel>
+
 <div class="row">
     <div class="col-md-12">
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>BirthDate</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@item.Id</td>
-                        <td>@item.Name</td>
-                        <td>@item.Email</td>
-                        <td>@item.BirthDate</td>
-                    </tr>
-                }
-
-            </tbody>
-        </table>
-
+        <div class="pull-left">
+            <a asp-action="Create" class="btn btn-primary">
+                <span title="Register New" class="glyphicon glyphicon-plus-sign"> Register New</span>
+            </a>
+        </div>
     </div>
+</div>
+<div class="panel panel-default">
+    @Html.AntiForgeryToken()
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>BirthDate</th>
+                <th>Address</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.BirthDate</td>
+                    <td>@item.Address.Province @item.Address.City @item.Address.Street</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-pencil"></span> 编辑
+                        </a>
 
+                        <a asp-action="详情" asp-route-id="@item.Id" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-search"></span> 详情
+                        </a>
+
+                        <a href="javascript:;" class="btn btn-danger btn-delete" data-rowid="@item.Id">
+                            <span class="glyphicon glyphicon-trash"></span> 删除
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
+@section Scripts{
+    <script>
+        var log = function () {
+            console.log.apply(console, arguments);
+        }
+        $(function () {
+
+            var deleteAction = function () {
+                $('.btn-delete').on('click', function () {
+                    var rowId = $(this).data('rowid')
+                    var token = $('input[name="__RequestVerificationToken"]').val();
+                    log(rowId, token)
+                    $.post('/Student/Delete', { id: rowId, __RequestVerificationToken: token }, function (data) {
+                        log(data);
+                        alert(data);
+                        //refresh page
+                        window.location.reload();
+                    })
+                });
+            }
+
+            var __main = function () {
+                deleteAction();
+            }
+            __main();
+        });
+
+    </script>
+}

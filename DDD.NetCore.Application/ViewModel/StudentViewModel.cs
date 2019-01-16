@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDD.NetCore.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -27,5 +28,7 @@ namespace DDD.NetCore.Application.ViewModel
         [DataType(DataType.Date, ErrorMessage = "Data em formato inválido")]
         [DisplayName("Birth Date")]
         public DateTime BirthDate { get; set; }
+
+        public AddressViewModel Address { get; set; }
     }
 }
