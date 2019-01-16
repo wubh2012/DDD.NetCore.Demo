@@ -7,15 +7,8 @@
 <form asp-action="Create" method="post">
     <div class="form-horizontal">
         <hr />
-        @if (ViewBag.Success != null)
-        {
-            <div class="alert alert-info" role="alert">
-                @ViewBag.Success
-            </div>
-        }
-
-        @*Replacing classic Validation Summary to Custom ViewComponent as TagHelper*@
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @*使用了 Component 显示信息*@
+        <vc:alerts></vc:alerts>
         <div class="form-group">
             <label asp-for="Name" class="col-md-2 control-label"></label>
             <div class="col-md-10">

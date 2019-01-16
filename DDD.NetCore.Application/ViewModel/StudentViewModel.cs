@@ -19,7 +19,7 @@ namespace DDD.NetCore.Application.ViewModel
         public string Name { get; set; }
 
         [Required(ErrorMessage = "The E-mail is Required")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "邮箱格式正确")]
         [DisplayName("E-mail")]
         public string Email { get; set; }
 

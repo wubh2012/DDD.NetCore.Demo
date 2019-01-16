@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Infrastructure.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Application", "DDD.NetCore.Application\DDD.NetCore.Application.csproj", "{87FAF590-57BC-4387-A21C-693219B957BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.NetCore.Domain.Core", "DDD.NetCore.Domain.Core\DDD.NetCore.Domain.Core.csproj", "{86CA80B7-A96C-4575-8CC2-CDEC725363B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.NetCore.Domain.Core", "DDD.NetCore.Domain.Core\DDD.NetCore.Domain.Core.csproj", "{86CA80B7-A96C-4575-8CC2-CDEC725363B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

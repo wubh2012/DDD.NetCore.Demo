@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DDD.NetCore.Application.Services;
 using DDD.NetCore.Application.ViewModel;
+using DDD.NetCore.Domain.Core.Commands;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDD.NetCore.UI.Controllers
@@ -47,10 +48,27 @@ namespace DDD.NetCore.UI.Controllers
         {
             try
             {
+                ViewBag.ErrorData = null;
                 if (!ModelState.IsValid)
                 {
                     return View(studentViewModel);
                 }
+                // 添加命令验证，采用构造函数方法实例
+                RegisterStudentCommand registerStudentCommand = new RegisterStudentCommand(studentViewModel.Name, studentViewModel.Email, studentViewModel.BirthDate);
+                // 如果命令无效，证明有错误
+                if (!registerStudentCommand.IsValid())
+                {
+                    List<string> errorInfo = new List<string>();
+                    //获取到错误，请思考这个Result从哪里来的 
+                    foreach (var error in registerStudentCommand.ValidationResult.Errors)
+                    {
+                        errorInfo.Add(error.ErrorMessage);
+                    }
+                    //对错误进行记录，还需要抛给前台
+                    ViewBag.ErrorData = errorInfo;
+                    return View(studentViewModel);
+                }
+
                 studentAppService.Register(studentViewModel);
                 ViewBag.Success = "Student Registered !";
                 return View(studentViewModel);
