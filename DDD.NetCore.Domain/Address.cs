@@ -1,4 +1,4 @@
-﻿using DDD.NetCore.Domain.Core.Models;
+﻿using DDD.NetCore.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

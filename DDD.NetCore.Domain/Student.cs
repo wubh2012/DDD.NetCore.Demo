@@ -1,4 +1,4 @@
-﻿using DDD.NetCore.Domain.Core.Models;
+﻿using DDD.NetCore.Domain.Models;
 using System;
 
 namespace DDD.NetCore.Domain

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,15 +32,20 @@ namespace DDD.NetCore.UI
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            // 添加 AutoMapper 
+            services.AddAutoMapperSetup();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            // 添加 AutoMapper 
-            services.AddAutoMapperSetup();
+            
 
             // 注入
             BootStrapper.RegistetServices(services);
 
+            // Adding MediatR for Domain Events
+            // 领域命令、领域事件等注入
+            // 引用包 MediatR.Extensions.Microsoft.DependencyInjection
+            services.AddMediatR(typeof(Startup));
 
         }
 
